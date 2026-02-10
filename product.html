@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products - Artisan Homemade Chocolate</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="brand">Artisan <span>Homemade</span> Chocolate</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Our Chocolates</h2>
+    <p class="small">Delivery only in Nanded • Delivered in 1–2 days</p>
+
+    <!-- Search box -->
+    <div class="search-wrap">
+      <input id="searchInput" type="text" placeholder="Search chocolate (e.g., Oreo, Kunafa, Nuts)">
+    </div>
+
+    <!-- Product grid -->
+    <div class="grid">
+
+      <div class="card product-card" data-name="Mix Nuts">
+        <h3>Mix Nuts</h3>
+        <div class="price">₹180</div>
+        <p class="small">A crunchy mix of nuts in smooth chocolate.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Mix Nuts', 180)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Roasted Almonds">
+        <h3>Roasted Almonds</h3>
+        <div class="price">₹180</div>
+        <p class="small">Roasted almonds for a premium bite.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Roasted Almonds', 180)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Cashew Delight">
+        <h3>Cashew Delight</h3>
+        <div class="price">₹180</div>
+        <p class="small">Creamy cashew crunch, super smooth.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Cashew Delight', 180)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Kunafa">
+        <h3>Kunafa</h3>
+        <div class="price">₹400</div>
+        <p class="small">Special premium bar with rich taste.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Kunafa', 400)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Oreo Flavour">
+        <h3>Oreo Flavour</h3>
+        <div class="price">₹120</div>
+        <p class="small">Cookies & cream style, crowd favorite.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Oreo Flavour', 120)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Plain Dark">
+        <h3>Plain Dark</h3>
+        <div class="price">₹150</div>
+        <p class="small">Bold dark chocolate for cocoa lovers.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Plain Dark', 150)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Plain White">
+        <h3>Plain White</h3>
+        <div class="price">₹120</div>
+        <p class="small">Smooth, creamy white chocolate.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Plain White', 120)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Plain Milk">
+        <h3>Plain Milk</h3>
+        <div class="price">₹120</div>
+        <p class="small">Classic milk chocolate, soft & tasty.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Plain Milk', 120)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Peanut Crunch">
+        <h3>Peanut Crunch</h3>
+        <div class="price">₹120</div>
+        <p class="small">Crunchy peanuts with chocolate goodness.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Peanut Crunch', 120)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Nutella Bar">
+        <h3>Nutella Bar</h3>
+        <div class="price">₹150</div>
+        <p class="small">Nutella-inspired rich creamy flavour.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Nutella Bar', 150)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Hazelnut Spread Bar">
+        <h3>Hazelnut Spread Bar</h3>
+        <div class="price">₹150</div>
+        <p class="small">Hazelnut spread taste, premium feel.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Hazelnut Spread Bar', 150)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Caramel Bliss">
+        <h3>Caramel Bliss</h3>
+        <div class="price">₹150</div>
+        <p class="small">Sweet caramel notes in smooth chocolate.</p>
+        <button class="btn btn-primary" onclick="orderProduct('Caramel Bliss', 150)">Order on WhatsApp</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

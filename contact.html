@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Artisan Homemade Chocolate</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="brand">Artisan <span>Homemade</span> Chocolate</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h2>Contact & Orders</h2>
+    <p class="small">Delivery only in Nanded • Delivered in 1–2 days</p>
+
+    <div class="card">
+      <form id="contactForm">
+        <input id="cName" type="text" placeholder="Your Name" required />
+        <input id="cPhone" type="tel" placeholder="Phone Number" required />
+        <input id="cAddress" type="text" placeholder="Address (Nanded only)" required />
+        <textarea id="cMessage" placeholder="Message (Example: I want 2 Mix Nuts bars)" required></textarea>
+
+        <button class="btn btn-primary" type="submit">
+          Save & WhatsApp
+        </button>
+      </form>
+
+      <div id="successBox" class="small" style="margin-top:10px;"></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
