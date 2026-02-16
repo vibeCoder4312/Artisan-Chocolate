@@ -36,94 +36,172 @@
       <input id="searchInput" type="text" placeholder="Search chocolate (e.g., Oreo, Kunafa, Nuts)">
     </div>
 
-    <!-- Product grid -->
+    <h3 style="margin:12px 0 8px;">Candies / Toffees</h3>
     <div class="grid">
 
-      <div class="card product-card" data-name="Mix Nuts">
-        <h3>Mix Nuts</h3>
-        <div class="price">₹180</div>
-        <p class="small">A crunchy mix of nuts in smooth chocolate.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Mix Nuts', 180)">Order on WhatsApp</button>
-      </div>
-
-      <div class="card product-card" data-name="Roasted Almonds">
-        <h3>Roasted Almonds</h3>
-        <div class="price">₹180</div>
-        <p class="small">Roasted almonds for a premium bite.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Roasted Almonds', 180)">Order on WhatsApp</button>
-      </div>
-
-      <div class="card product-card" data-name="Cashew Delight">
-        <h3>Cashew Delight</h3>
-        <div class="price">₹180</div>
-        <p class="small">Creamy cashew crunch, super smooth.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Cashew Delight', 180)">Order on WhatsApp</button>
-      </div>
-
-      <div class="card product-card" data-name="Kunafa">
-        <h3>Kunafa</h3>
-        <div class="price">₹400</div>
-        <p class="small">Special premium bar with rich taste.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Kunafa', 400)">Order on WhatsApp</button>
-      </div>
-
-      <div class="card product-card" data-name="Oreo Flavour">
-        <h3>Oreo Flavour</h3>
-        <div class="price">₹120</div>
-        <p class="small">Cookies & cream style, crowd favorite.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Oreo Flavour', 120)">Order on WhatsApp</button>
-      </div>
-
-      <div class="card product-card" data-name="Plain Dark">
-        <h3>Plain Dark</h3>
-        <div class="price">₹150</div>
-        <p class="small">Bold dark chocolate for cocoa lovers.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Plain Dark', 150)">Order on WhatsApp</button>
-      </div>
-
-      <div class="card product-card" data-name="Plain White">
-        <h3>Plain White</h3>
-        <div class="price">₹120</div>
-        <p class="small">Smooth, creamy white chocolate.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Plain White', 120)">Order on WhatsApp</button>
-      </div>
-
-      <div class="card product-card" data-name="Plain Milk">
-        <h3>Plain Milk</h3>
-        <div class="price">₹120</div>
-        <p class="small">Classic milk chocolate, soft & tasty.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Plain Milk', 120)">Order on WhatsApp</button>
-      </div>
-
-      <div class="card product-card" data-name="Peanut Crunch">
+      <div class="card product-card" data-name="Peanut Crunch" data-price="120" data-category="Candies">
         <h3>Peanut Crunch</h3>
         <div class="price">₹120</div>
-        <p class="small">Crunchy peanuts with chocolate goodness.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Peanut Crunch', 120)">Order on WhatsApp</button>
+        <p class="small">Crunchy and tasty.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
       </div>
 
-      <div class="card product-card" data-name="Nutella Bar">
-        <h3>Nutella Bar</h3>
+      <div class="card product-card" data-name="Cashew Delight" data-price="180" data-category="Candies">
+        <h3>Cashew Delight</h3>
+        <div class="price">₹180</div>
+        <p class="small">Creamy cashew crunch.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Mix Nuts" data-price="180" data-category="Candies">
+        <h3>Mix Nuts</h3>
+        <div class="price">₹180</div>
+        <p class="small">Premium nuts in chocolate.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Plain Dark" data-price="150" data-category="Candies">
+        <h3>Plain Dark</h3>
         <div class="price">₹150</div>
-        <p class="small">Nutella-inspired rich creamy flavour.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Nutella Bar', 150)">Order on WhatsApp</button>
+        <p class="small">Bold dark chocolate.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
       </div>
 
-      <div class="card product-card" data-name="Hazelnut Spread Bar">
-        <h3>Hazelnut Spread Bar</h3>
-        <div class="price">₹150</div>
-        <p class="small">Hazelnut spread taste, premium feel.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Hazelnut Spread Bar', 150)">Order on WhatsApp</button>
+      <div class="card product-card" data-name="Plain White" data-price="120" data-category="Candies">
+        <h3>Plain White</h3>
+        <div class="price">₹120</div>
+        <p class="small">Creamy white chocolate.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
       </div>
 
-      <div class="card product-card" data-name="Caramel Bliss">
+      <div class="card product-card" data-name="Plain Milk" data-price="120" data-category="Candies">
+        <h3>Plain Milk</h3>
+        <div class="price">₹120</div>
+        <p class="small">Classic milk chocolate.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Caramel Bliss" data-price="150" data-category="Candies">
         <h3>Caramel Bliss</h3>
         <div class="price">₹150</div>
-        <p class="small">Sweet caramel notes in smooth chocolate.</p>
-        <button class="btn btn-primary" onclick="orderProduct('Caramel Bliss', 150)">Order on WhatsApp</button>
+        <p class="small">Sweet caramel notes.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
       </div>
 
     </div>
+
+    <h3 style="margin:18px 0 8px;">Bars</h3>
+    <div class="grid">
+
+      <div class="card product-card" data-name="Roasted Almonds" data-price="180" data-category="Bars">
+        <h3>Roasted Almonds</h3>
+        <div class="price">₹180</div>
+        <p class="small">Roasted almond premium bar.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Kunafa" data-price="400" data-category="Bars">
+        <h3>Kunafa</h3>
+        <div class="price">₹400</div>
+        <p class="small">Special premium chocolate bar.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Oreo Flavour" data-price="120" data-category="Bars">
+        <h3>Oreo Flavour</h3>
+        <div class="price">₹120</div>
+        <p class="small">Cookies & cream style.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Nutella Bar" data-price="150" data-category="Bars">
+        <h3>Nutella Bar</h3>
+        <div class="price">₹150</div>
+        <p class="small">Rich nutella taste.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
+      </div>
+
+      <div class="card product-card" data-name="Hazelnut Spread Bar" data-price="150" data-category="Bars">
+        <h3>Hazelnut Spread Bar</h3>
+        <div class="price">₹150</div>
+        <p class="small">Hazelnut spread flavour.</p>
+
+        <div class="qty-row">
+          <label class="small">Qty:</label>
+          <input class="qty" type="number" min="1" value="1">
+        </div>
+
+        <button class="btn btn-primary" onclick="orderFromCard(this)">Order on WhatsApp</button>
+      </div>
+
+    </div>
+
   </div>
 </section>
 
