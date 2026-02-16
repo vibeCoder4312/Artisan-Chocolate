@@ -1,6 +1,6 @@
 const SHEET_API_URL = "https://script.google.com/macros/s/AKfycbyzCgHtzeQq8NYVqImyOSgXqbICStWj3ti6sVQ1COWl2jfAF-7T7ya87e1TyhBybKY/exec"; // Google Sheet link
 
-const WHATSAPP_NUMBER = "919022797055";
+const WHATSAPP_NUMBER = "918329435696";
 
 function openWhatsApp(message){
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -76,3 +76,40 @@ async function saveToSheet(payload){
   }
 }
 
+function orderFromCard(btn){
+  const card = btn.closest(".product-card");
+  const name = card.getAttribute("data-name");
+  const price = Number(card.getAttribute("data-price"));
+  const category = card.getAttribute("data-category");
+
+  const qtyInput = card.querySelector(".qty");
+  const qty = Math.max(1, Number(qtyInput.value || 1));
+  const total = price * qty;
+
+  // Ask customer details
+  const customerName = prompt("Enter your name:");
+  if(!customerName) return;
+
+  const customerPhone = prompt("Enter your phone number:");
+  if(!customerPhone) return;
+
+  const customerAddress = prompt("Enter your delivery address (Nanded only):");
+  if(!customerAddress) return;
+
+  const msg =
+`Hi Artisan Homemade Chocolate, I want to order:
+
+Name: ${customerName}
+Phone: ${customerPhone}
+Address: ${customerAddress}
+
+Category: ${category}
+Item: ${name}
+Qty: ${qty}
+Price: ₹${price}
+Total: ₹${total}
+
+Please confirm availability and delivery time.`;
+
+  openWhatsApp(msg);
+};
